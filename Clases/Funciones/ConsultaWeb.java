@@ -4,15 +4,30 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Objects;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+
 
 public class ConsultaWeb {
     public static void paginaCompleta(String uerreele) throws IOException {
         URL link = new URL(uerreele);
         URLConnection yc = link.openConnection();
         BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
+        BufferedReader br = new BufferedReader(new FileReader("mezcla.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter("mezcla.txt"));
+
+        String inputLine="";
+        while (!inputLine.equals("try{")){
+            inputLine = in.readLine();
+            bw.write(inputLine + "\n");
+        }
         in.close();
+
+
+
     }
+
 }

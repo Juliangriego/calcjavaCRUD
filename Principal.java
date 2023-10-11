@@ -16,8 +16,8 @@ import java.net.URLConnection;
 
 public class Principal {
     public static void main(String[] args) throws IOException {
-        String url = "https://docs.google.com/spreadsheets/d/1tWc5QkekBx1wvfwblW_Q0GEvSxCnZwtnbld5ipl60Mw";
+        String url = "https://docs.google.com/spreadsheets/d/1tWc5QkekBx1wvfwblW_Q0GEvSxCnZwtnbld5ipl60Mw/edit?resourcekey#gid=429843823&range=A2";
         Clases.Funciones.ConsultaWeb.paginaCompleta(url);
+        
     }
-    
 }
