@@ -26,7 +26,12 @@ public class ConsultaWeb {
         }
         in.close();
 
-
+        inputLine="";
+        while (inputLine != null){
+            inputLine = br.readLine();
+            int i = 1;
+            System.out.println(i + ". " + inputLine);
+        }
 
     }
 
